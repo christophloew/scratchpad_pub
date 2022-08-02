@@ -1,0 +1,75 @@
+{
+  "@id":"dtmi:EdgeConcentrator:MQTTRelay;1",
+  "@type":"Interface",
+  "contents":[
+  {
+	"@id": "dtmi:EdgeConcentrator:MQTTRelay:verbose;1",
+	"@type": [
+	  "Property",
+	  "BooleanValue"
+	],
+	"comment": "verbosity",
+	"description": {
+	  "en": "How much logs are generated"
+	},
+	"displayName": {
+	  "en": "verbose"
+	},
+	"name": "verbose",
+	"schema": "boolean",
+	"writable": true,
+	"falseName": {
+	  "en": "normal"
+	},
+	"trueName": {
+	  "en": "verbose"
+	}
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:MQTTRelay:topicBlacklist;1",
+	"@type": [
+	  "Property",
+	  "StringValue"
+	],
+	"comment": "comma separated base64",
+	"description": {
+	  "en": "a list of blocked topics"
+	},
+	"displayName": {
+	  "en": "topicBlacklist"
+	},
+	"name": "topicBlacklist",
+	"schema": "string",
+	"writable": true,
+	"minLength": 0
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:MQTTRelay:topicWhitelist;1",
+	"@type": [
+	  "Property",
+	  "StringValue"
+	],
+	"comment": "comma separated base64",
+	"description": {
+	  "en": "a list of allowed topics, if empty all topics are allowed"
+	},
+	"displayName": {
+	  "en": "topicWhitelist"
+	},
+	"name": "topicWhitelist",
+	"schema": "string",
+	"writable": true,
+	"minLength": 0
+  }
+  ],
+  "displayName":{
+	 "en":"Module MQTTRelay"
+  },
+  "description":{
+	 "en":"The EdgeConcentrator module implementing MQTT"
+  },
+  "@context":[
+	 "dtmi:iotcentral:context;2",
+	 "dtmi:dtdl:context;2"
+  ]
+}

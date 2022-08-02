@@ -1,0 +1,113 @@
+{
+  "@id":"dtmi:EdgeConcentrator:Concentrator;1",
+  "@type":"Interface",
+  "contents":[
+  {
+	"@id": "dtmi:EdgeConcentrator:Concentrator:verbose;1",
+	"@type": [
+	  "Property",
+	  "BooleanValue"
+	],
+	"comment": "verbosity",
+	"description": {
+	  "en": "how much logs are generated"
+	},
+	"displayName": {
+	  "en": "verbose"
+	},
+	"name": "verbose",
+	"schema": "boolean",
+	"writable": true,
+	"falseName": {
+	  "en": "normal"
+	},
+	"trueName": {
+	  "en": "verbose"
+	}
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:Concentrator:iotCentralRelayURL;1",
+	"@type": [
+	  "Property",
+	  "StringValue"
+	],
+	"comment": "HTTPS URL",
+	"description": {
+	  "en": "needs to contain the sequence \"%s-%ld-%ld\" to printf device ID"
+	},
+	"displayName": {
+	  "en": "iotCentralRelayURL"
+	},
+	"name": "iotCentralRelayURL",
+	"schema": "string",
+	"writable": true
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:Concentrator:spigotDeviceConnectionString;1",
+	"@type": [
+	  "Property",
+	  "StringValue"
+	],
+	"comment": "Connection string for Spigot device",
+	"description": {
+	  "en": "points to another IoT Hub instance"
+	},
+	"displayName": {
+	  "en": "spigotDeviceConnectionString"
+	},
+	"name": "spigotDeviceConnectionString",
+	"schema": "string",
+	"writable": true
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:Concentrator:accumulationTime;1",
+	"@type": [
+	  "Property",
+	  "NumberValue"
+	],
+	"comment": "accumulation time",
+	"description": {
+	  "en": "0 disables accumulation"
+	},
+	"displayName": {
+	  "en": "accumulationTime"
+	},
+	"name": "accumulationTime",
+	"schema": "integer",
+	"unit": "second",
+	"writable": true,
+	"decimalPlaces": 0,
+	"displayUnit": {
+	  "en": "s"
+	},
+	"minValue": 1
+  },
+  {
+	"@id": "dtmi:EdgeConcentrator:Concentrator:iotCentralRelayAPIKey;1",
+	"@type": [
+	  "Property",
+	  "StringValue"
+	],
+	"comment": "the API key for the relay",
+	"description": {
+	  "en": "only used if iotCentralRelayURL is set"
+	},
+	"displayName": {
+	  "en": "iotCentralRelayAPIKey"
+	},
+	"name": "iotCentralRelayAPIKey",
+	"schema": "string",
+	"writable": true
+  }
+  ],
+  "displayName":{
+	 "en":"Module Concentrator"
+  },
+  "description":{
+	 "en":"The EdgeConcentrator module receiving all telemetry and sending it onward after colaltion and deduplication"
+  },
+  "@context":[
+	 "dtmi:iotcentral:context;2",
+	 "dtmi:dtdl:context;2"
+  ]
+}

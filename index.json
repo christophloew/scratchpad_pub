@@ -1,0 +1,32 @@
+{
+  "links": {
+    "self": "index.json"
+  },
+  "models": {
+    "dtmi:Spigot;1": {
+      "displayName": {
+        "en": "Spigot"
+      },
+      "description": {
+        "en": "The device the EgdeConcentrator implements to send telemetry and receive commands from another IoT hub"
+      }
+    },
+    "dtmi:EdgeConcentrator:Concentrator;1": {
+      "displayName": {
+        "en": "Module Concentrator"
+      },
+      "description": {
+        "en": "The EdgeConcentrator module receiving all telemetry and sending it onward after colaltion and deduplication"
+      }
+    },
+    "dtmi:EdgeConcentrator:MQTTRelay;1": {
+      "displayName": {
+        "en": "Module MQTTRelay"
+      },
+      "description": {
+        "en": "The EdgeConcentrator module implementing MQTT"
+      }
+    }
+  },
+  "version": "1.0"
+}
